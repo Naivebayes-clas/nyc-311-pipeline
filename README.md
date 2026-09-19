@@ -37,31 +37,6 @@ This project builds a **reproducible, scheduled pipeline** that:
 | Visualization | [Streamlit](https://streamlit.io/) | Interactive web dashboard |
 | Infrastructure | [Docker Compose](https://docs.docker.com/compose/) | Reproducible local environment |
 
----
-
-## Project Structure
-   nyc-311-pipeline/
-├── airflow/
-│ └── dags/
-│ └── nyc_311_dag.py # 3-task DAG: fetch → load → transform
-├── dbt_project/
-│ ├── dbt_project.yml # dbt project config
-│ ├── profiles.yml # DB connection config
-│ └── models/
-│ ├── sources.yml # Points to raw_311_requests table
-│ ├── staging/
-│ │ └── stg_311_requests.sql # View: cleaned + derived cols
-│ └── marts/
-│ └── top_complaints_by_borough.sql # Table: top 5 per boro/month
-├── streamlit_app/
-│ ├── app.py # Dashboard (KPIs, charts, filters)
-│ ├── data.csv # Exported data (for Streamlit Cloud)
-│ └── requirements.txt
-├── docker-compose.yml # Postgres container
-├── requirements.txt # Python dependencies
-├── .gitignore
-└── README.md
-
 
 
 ---
@@ -74,7 +49,7 @@ This project builds a **reproducible, scheduled pipeline** that:
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - ~2 GB free disk space
 
-### 1. Clone & Install
+1. Clone & Install
 
 ```bash
 git clone https://github.com/Naivebayes-clas/nyc-311-pipeline.git
@@ -85,7 +60,7 @@ source venv/bin/activate
 pip install -r requirements.txt   
 
 
-2. Start PostgreSQL
+2. Start Postgresql
 docker compose up -d   
 
 3. Configure & Start Airflow
