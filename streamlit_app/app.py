@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import psycopg2
+
 
 st.set_page_config(page_title="NYC 311 Complaints", layout="wide")
 st.title("NYC 311 Service Requests Dashboard")
