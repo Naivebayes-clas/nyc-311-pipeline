@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-
+import os
 
 st.set_page_config(page_title="NYC 311 Complaints", layout="wide")
 st.title("NYC 311 Service Requests Dashboard")
@@ -8,8 +8,9 @@ st.caption("Top complaint types by borough | Airflow + dbt + Postgres + dbt")
 
 @st.cache_data(ttl=3600)
 def load_data():
-    # Read from CSV (works on Streamlit Cloud)
-    df = pd.read_csv("data.csv", parse_dates=["request_month"])
+    # Get the directory where app.py lives (works locally AND on Streamlit Cloud)
+    data_path = os.path.join(os.path.dirname(__file__), "data.csv")
+    df = pd.read_csv(data_path, parse_dates=["request_month"])
     return df   
 
 df = load_data()
