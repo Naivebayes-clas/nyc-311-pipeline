@@ -1,0 +1,7 @@
+version: 2
+sources:
+  - name: nyc311
+    database: nyc311
+    schema: public
+    tables:
+      - name: raw_311_requests  

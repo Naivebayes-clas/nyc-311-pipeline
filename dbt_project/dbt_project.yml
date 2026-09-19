@@ -1,0 +1,6 @@
+name: nyc_311_dbt
+version: "1.0.0"
+config-version: 2
+profile: nyc311
+
+model-paths: ["models"]

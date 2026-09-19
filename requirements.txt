@@ -1,0 +1,9 @@
+# --- requirements.txt ---
+cat > requirements.txt << 'EOF'
+apache-airflow[postgres]==2.10.4
+dbt-postgres==1.8.3
+pandas==2.2.3
+psycopg2-binary==2.9.10
+streamlit==1.39.0
+requests==2.32.3
+

@@ -1,0 +1,12 @@
+nyc311:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 6543
+      user: nyc311_user
+      password: nyc311_pass
+      dbname: nyc311
+      schema: analytics
+      threads: 1   
