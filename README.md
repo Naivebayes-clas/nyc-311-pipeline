@@ -2,6 +2,11 @@
 
 > End-to-end data pipeline that ingests NYC 311 service requests from a live REST API, stores them in PostgreSQL, transforms them with dbt, and serves an interactive dashboard via Streamlit.
 
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
+
 **🔗 Live Dashboard:** [https://nyc-311-pipeline-qmfskayepvxus5n5kz26s6.streamlit.app/](https://nyc-311-pipeline-qmfskayepvxus5n5kz26s6.streamlit.app/)
 
 | ![Dashboard](dashboard.png) | ![Dashboard](dashboard_1.png) | ![Dashboard](dashboard_2.png) | ![Dag graph](dag_graph.png) | ![Dag grid](dag_grid.png) |
